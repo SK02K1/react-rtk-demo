@@ -14,8 +14,16 @@ export const Bakery = () => {
   };
 
   return (
-    <div>
-      <h1>Bakery</h1>
+    <div
+      style={{
+        margin: '1rem auto',
+        padding: '1rem',
+        borderRadius: '5px',
+        background: '#ccc',
+        width: 'max-content',
+      }}
+    >
+      <h2>Bakery</h2>
       <p>no. of cakes available: {cakesCounter}</p>
       <form onSubmit={restockHandler}>
         <div>
