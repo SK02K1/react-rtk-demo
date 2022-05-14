@@ -11,9 +11,12 @@ const cakeSlice = createSlice({
     cakeOrdered: (state) => {
       state.numberOfCakes--;
     },
+    cakeRestocked: (state, { payload: { restockValue } }) => {
+      state.numberOfCakes += restockValue;
+    },
   },
 });
 
 export const selectCakesCount = (state) => state.cake.numberOfCakes;
-export const { cakeOrdered } = cakeSlice.actions;
+export const { cakeOrdered, cakeRestocked } = cakeSlice.actions;
 export default cakeSlice.reducer;
